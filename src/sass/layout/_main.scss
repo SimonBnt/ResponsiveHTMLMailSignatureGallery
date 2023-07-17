@@ -1,0 +1,214 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 3rem 0;
+
+    @include respondTo(md) {
+        margin-bottom: 2rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+        color: #FF9400;
+        text-transform: uppercase;
+        background-color: black;
+        padding: 1rem 0;
+        width: 100%;
+        border-top: solid #FF9400 2px;
+        border-bottom: solid #FF9400 2px;
+
+        @include respondTo(sm) {
+            font-size: 2rem;
+        }
+    }
+
+    #mainContainer {
+        padding: 0.5rem;
+        margin: 0 1rem;
+        border: solid 2px black;
+        border-radius: 0.5rem;
+        box-shadow: 0px 2px 4px black;
+        line-height: 1.5rem;
+        letter-spacing: 0.1rem;
+        color: white;
+        font-size: 1.25rem;
+        background-color: rgb(20, 20, 20);
+
+        @include respondTo(md) {
+            width: 1000px;
+        }
+
+        #welcome {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 2rem;
+
+            @include respondTo(md) {
+                font-size: 2rem;
+            }
+        }
+
+        .introductionContainers {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+
+            .introduction {
+                font-size: 1rem;
+            }
+
+            .flag {
+                width: 36px;
+            }
+        }
+
+
+        #orderMainContainer {
+            @include respondTo(md) {
+                width: fit-content;
+                margin: 0 auto;
+            }
+
+            .orderContainers {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin:  1rem 0.5rem;
+                box-shadow: 0px 2px 4px black;
+                background-color: black;
+                border-radius: 0.5rem;
+                padding: 1rem 0;
+                font-size: 1rem;
+
+                @include respondTo(md) {
+                    flex-direction: row;
+                    gap: 0 1rem;
+                    padding: 1rem 2rem;
+                    border: solid #FF9400 2px;
+                    box-shadow: 0px 2px 4px #FF9400;
+                    margin: 2rem 0;
+                }
+
+                .flag {
+                    width: 36px;
+                }
+                
+                .ctaContainers {
+                    border-right: solid white 2px;
+                    border-bottom: solid white 2px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 0.5rem;
+                    padding: 0.25rem;
+                    background-color: #FF9400;
+                    border-radius: 0.5rem;
+                    
+                    @include respondTo(md) {
+                        cursor: pointer;
+                        
+                        &:hover {
+                            background-color: white;
+                            border-right: solid #FF9400 2px;
+                            border-bottom: solid #FF9400 2px;
+                        }
+                        &:active {
+                            transform: translateX(2px);
+                            transform: translateY(2px);
+                        }
+                    }
+
+                    .orderLink {
+                        text-decoration: none;
+                        color: black;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .mainContainers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .msTitle {
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 0.25rem;
+            color: white;
+            margin-bottom: 4rem;
+            text-decoration: underline 4px;
+
+            @include respondTo(md) {
+                font-size: 2.5rem;
+                letter-spacing: 0.5rem;
+            }
+
+            &::before {
+                content: "-";
+            }
+
+            &::after {
+                content: "-";
+            }
+        }
+
+        #myMs {
+            background-color: rgb(20, 20, 20);
+            border: black solid 2px;
+            box-shadow: 0px 2px 4px black;
+        }
+
+        .imgContainers {
+            border: solid 2px;
+            border-radius: 0.5rem;
+            box-shadow: 0px 2px 4px black;
+            padding: 0.5rem;
+            margin: 0 1rem;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem 0;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(20, 20, 20);
+
+            @include respondTo(md) {
+                flex-direction: row;
+                gap: 0 2rem;
+                padding: 2rem;
+            }
+            
+            .mailSignatureImg {
+                display: block;
+                border-radius: 0.5rem;
+                border: solid #FF9400 2px;
+                box-shadow: 0px 2px 4px #FF9400;
+                
+                @include respondTo(md) {
+                    width: 750px;
+                    display: block;
+                }
+            }
+        }
+
+        .premium {
+            margin-top: 1rem;
+        }
+    }
+
+    .last {
+        margin-bottom: 2rem;
+    }
+}
